@@ -10,12 +10,10 @@ body {
             font-size: 25px;
         }
 
-        /* ซ่อน checkbox */
         #menu_toggle {
             display: none;
         }
 
-        /* เมื่อ checkbox ถูกเช็ค */
         #menu_toggle:checked ~ .menu_btn > span {
             transform: rotate(45deg);
         }
@@ -33,7 +31,6 @@ body {
             left: 0 !important;
         }
 
-        /* ส่วนหัวเมนู */
         .menu_header {
             position: fixed;
             left: 20px;
@@ -44,7 +41,6 @@ body {
             z-index: 100;
         }
 
-        /* ปุ่มเมนู */
         .menu_btn {
             width: 26px;
             height: 26px;
@@ -74,7 +70,6 @@ body {
             top: 8px;
         }
 
-        /* ข้อความข้างเมนู */
         .menu_text {
             font-size: 18px;
             font-weight: 600;
@@ -82,7 +77,6 @@ body {
             white-space: nowrap;
         }
 
-        /* กล่องเมนู */
         .menu_box {
             display: block;
             position: fixed;
@@ -113,7 +107,6 @@ body {
             background-color: #cfd8dc;
         }
 
-        /* ข้อความข้างเมนู */
         .menu_text {
             position: fixed;
             left: 60px;
