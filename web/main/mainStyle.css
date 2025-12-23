@@ -1,0 +1,135 @@
+body {
+            margin: 0;
+            padding: 0;
+            background-color: #CCFFFF;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            color: #6600ff;
+            font-size: 25px;
+        }
+
+        /* ซ่อน checkbox */
+        #menu_toggle {
+            display: none;
+        }
+
+        /* เมื่อ checkbox ถูกเช็ค */
+        #menu_toggle:checked ~ .menu_btn > span {
+            transform: rotate(45deg);
+        }
+
+        #menu_toggle:checked ~ .menu_btn > span::before {
+            top: 0;
+            transform: rotate(90deg);
+        }
+
+        #menu_toggle:checked ~ .menu_btn > span::after {
+            opacity: 0;
+        }
+
+        #menu_toggle:checked ~ .menu_box {
+            left: 0 !important;
+        }
+
+        /* ส่วนหัวเมนู */
+        .menu_header {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 100;
+        }
+
+        /* ปุ่มเมนู */
+        .menu_btn {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu_btn > span,
+        .menu_btn > span::before,
+        .menu_btn > span::after {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #333;
+            transition-duration: .25s;
+        }
+
+        .menu_btn > span::before {
+            content: '';
+            top: -8px;
+        }
+
+        .menu_btn > span::after {
+            content: '';
+            top: 8px;
+        }
+
+        /* ข้อความข้างเมนู */
+        .menu_text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+        }
+
+        /* กล่องเมนู */
+        .menu_box {
+            display: block;
+            position: fixed;
+            width: 300px;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            margin: 0;
+            background-color: #fff;
+            padding: 80px 0;
+            list-style: none;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+            transition-duration: .25s;
+            z-index: 99;
+        }
+
+        .menu_item {
+            display: block;
+            padding: 12px 24px;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            transition-duration: .25s;
+        }
+
+        .menu_item:hover {
+            background-color: #cfd8dc;
+        }
+
+        /* ข้อความข้างเมนู */
+        .menu_text {
+            position: fixed;
+            left: 60px;
+            top: 22px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            z-index: 100;
+        }
+
+        .content {
+            padding: 80px 20px 20px 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #6600ff;
+            margin: 20px 0;
+        }
